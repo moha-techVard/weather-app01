@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>weather</title>
+  </head>
+  <body>
+    <section>
+      <div class="block1">
+        <form>
+          <input type="text " placeholder="put city name " id="city" />
+          <button id="button"><img src="/img/search.png" id="img1" /></button>
+        </form>
+      </div>
+      <div class="block2">
+        <img src="/img/nuageu.weather.png" id="img" />
+        <h1>malaga</h1>
+        <h2 class="cityName">22°c</h2>
+      </div>
+      <div class="block3">
+        <div class="left">
+          <img src="/img/humidity-icon-2048x1675-xxsge5os.png" id="img2" />
+          <p id="p1">50%</p>
+          <p>humidity</p>
+        </div>
+        <div class="right">
+          <img src="/img/1129571-200.png" id="img3" />
+          <p id="p2">18 km/h</p>
+          <p>wind speed</p>
+        </div>
+      </div>
+      <!-- Ajoutez ceci dans votre section principale -->
+      <div id="forecast-container" class="forecast-container"></div>
+    </section>
+    <script src="/main.js"></script>
+  </body>
+</html>

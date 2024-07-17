@@ -1,0 +1,205 @@
+/* Réinitialisation des styles par défaut */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style de base pour le corps et les polices */
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.6;
+  background: #e0f7fa;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Style pour le formulaire */
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* Style pour la section principale */
+section {
+  width: 90%;
+  max-width: 800px;
+  margin: 20px auto;
+  background: linear-gradient(135deg, #00796b 0%, #009688 100%);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  color: #fff;
+}
+
+/* Style pour le bouton de recherche */
+#button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background-color: #00695c;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+#button:hover {
+  transform: scale(1.1);
+  background-color: #004d40;
+}
+
+/* Style pour l'image de recherche */
+#img1 {
+  width: 30px;
+}
+
+/* Style pour l'input de saisie de ville */
+#city {
+  height: 35px;
+  padding: 0 15px;
+  background: #fff;
+  border-radius: 25px;
+  border: 1px solid #00695c;
+  font-size: 1rem;
+  margin-right: 10px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+#city:focus {
+  border-color: #004d40;
+}
+
+/* Style pour le bloc météo principal */
+.block2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #333;
+  display: none;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin: 10px 0;
+  color: #00796b;
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 10px 0;
+  color: #004d40;
+}
+
+/* Style pour l'image de la météo */
+#img {
+  width: 100px;
+  height: 100px;
+  margin: 20px 0;
+  object-fit: contain; /* S'assure que l'image reste dans ses dimensions */
+}
+
+/* Style pour le bloc des informations additionnelles */
+.block3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 80%;
+  margin: 0 auto;
+  gap: 20px;
+  margin-top: 20px;
+  display: none;
+}
+
+.left,
+.right {
+  text-align: center;
+  color: #333;
+}
+
+.left img,
+.right img {
+  display: block;
+  margin: 0 auto 10px;
+  width: 50px;
+  height: 50px;
+  object-fit: contain; /* S'assure que l'image reste dans ses dimensions */
+}
+
+.left p,
+.right p {
+  margin: 5px 0;
+}
+
+/* Style pour le conteneur de prévisions */
+#forecast-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.forecast-item {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.forecast-item :hover {
+  transform: scale(1.2);
+}
+.forecast-item h3 {
+  margin-bottom: 10px;
+  color: #00796b;
+}
+
+.forecast-item p {
+  margin: 5px 0;
+}
+
+/* Media queries pour rendre le design réactif */
+@media (max-width: 768px) {
+  section {
+    width: 95%;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  #img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .block3 {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  #forecast-container {
+    grid-template-columns: 1fr;
+  }
+
+  .forecast-item {
+    padding: 10px;
+  }
+}
