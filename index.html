@@ -4,10 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
     <title>weather</title>
   </head>
   <body>
     <section>
+      <div class="video-background">
+        <video autoplay muted loop id="background-video">
+          <source src="" type="video/mp4" />
+          Votre navigateur ne supporte pas la balise vidéo.
+        </video>
+      </div>
       <div class="block1">
         <form>
           <input type="text " placeholder="put city name " id="city" />
@@ -21,14 +32,14 @@
       </div>
       <div class="block3">
         <div class="left">
-          <img src="/img/humidity-icon-2048x1675-xxsge5os.png" id="img2" />
-          <p id="p1">50%</p>
+          <img src="/img/humidity-22.webp" id="img2" />
           <p>humidity</p>
+          <p id="p1">50%</p>
         </div>
         <div class="right">
           <img src="/img/1129571-200.png" id="img3" />
-          <p id="p2">18 km/h</p>
           <p>wind speed</p>
+          <p id="p2">18 km/h</p>
         </div>
       </div>
       <!-- Ajoutez ceci dans votre section principale -->

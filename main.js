@@ -8,7 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
   button.addEventListener("click", (event) => {
     event.preventDefault(); // Empêcher le comportement par défaut du formulaire
     document.querySelector(".block2").style.display = "block";
-    document.querySelector(".block3").style.display = "block";
+    document.querySelector(".block3").style.opacity = "1";
+    document.querySelector(".video-background").style.display = "block";
     getCurrentWeather();
     getForecast();
   });
@@ -27,6 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
         throw new Error("Erreur réseau : " + response.statusText);
       }
       const data = await response.json();
+      console.log(data);
       displayCurrentWeather(data);
     } catch (error) {
       console.error("Erreur:", error);
@@ -40,6 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const p1 = document.getElementById("p1");
     const p2 = document.getElementById("p2");
     const img = document.getElementById("img");
+    const video = document.getElementById("background-video");
 
     h1.innerHTML = data.name;
     h2.innerHTML = data.main.temp + "°C";
@@ -49,11 +52,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const weatherCondition = data.weather[0].main.toLowerCase();
 
     if (weatherCondition === "clouds") {
-      img.src = "/img/nuageu.weather.png";
+      img.src = "/img/Draw_cloudy.png";
+      video.src = "/img/istockphoto-clouds_adpp_is.mp4";
     } else if (weatherCondition === "rain") {
-      img.src = "/img/raining.weather.png";
+      img.src = "/img/raining.weather.webp";
+      video.src = "/img/istockphoto-1346376819-640_adpp_is.mp4";
     } else if (weatherCondition === "clear") {
       img.src = "/img/sunny.weather.png";
+      video.src = "/img/istockphoto-sunny_adpp_is.mp4";
     } else {
       img.src = "/img/default.weather.png"; // Image par défaut si la condition ne correspond à aucune des autres
     }
