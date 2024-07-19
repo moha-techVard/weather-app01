@@ -1,50 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Déclaration de l'encodage des caractères -->
     <meta charset="UTF-8" />
+    <!-- Déclaration de la largeur de la vue pour les appareils mobiles -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Lien vers la feuille de style CSS -->
     <link rel="stylesheet" href="/style.css" />
+    <!-- Lien vers la bibliothèque Font Awesome pour les icônes -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
-
+    <!-- Titre de la page affiché dans l'onglet du navigateur -->
     <title>weather</title>
   </head>
   <body>
+    <!-- Section principale contenant le formulaire et les blocs d'affichage -->
     <section>
+      <!-- Bloc pour la vidéo de fond -->
       <div class="video-background">
         <video autoplay muted loop id="background-video">
+          <!-- Source de la vidéo de fond -->
           <source src="" type="video/mp4" />
+          <!-- Message affiché si la vidéo n'est pas supportée -->
           Votre navigateur ne supporte pas la balise vidéo.
         </video>
       </div>
+
+      <!-- Bloc contenant le formulaire de recherche -->
       <div class="block1">
         <form>
-          <input type="text " placeholder="put city name " id="city" />
-          <button id="button"><img src="/img/search.png" id="img1" /></button>
+          <!-- Champ de saisie pour le nom de la ville -->
+          <input type="text" placeholder="put city name" id="city" />
+          <!-- Bouton de recherche avec une image -->
+          <button id="button">
+            <img src="/img/search.png" id="img1" />
+          </button>
         </form>
       </div>
+
+      <!-- Bloc affichant les informations météorologiques actuelles -->
       <div class="block2">
+        <!-- Image représentant les conditions météorologiques -->
         <img src="/img/nuageu.weather.png" id="img" />
+        <!-- Titre affichant le nom de la ville -->
         <h1>malaga</h1>
+        <!-- Sous-titre affichant la température actuelle -->
         <h2 class="cityName">22°c</h2>
       </div>
+
+      <!-- Bloc affichant les informations supplémentaires -->
       <div class="block3">
+        <!-- Bloc pour l'humidité -->
         <div class="left">
+          <!-- Image représentant l'humidité -->
           <img src="/img/humidity-22.webp" id="img2" />
+          <!-- Libellé pour l'humidité -->
           <p>humidity</p>
+          <!-- Valeur de l'humidité -->
           <p id="p1">50%</p>
         </div>
+        <!-- Bloc pour la vitesse du vent -->
         <div class="right">
+          <!-- Image représentant la vitesse du vent -->
           <img src="/img/1129571-200.png" id="img3" />
+          <!-- Libellé pour la vitesse du vent -->
           <p>wind speed</p>
+          <!-- Valeur de la vitesse du vent -->
           <p id="p2">18 km/h</p>
         </div>
       </div>
-      <!-- Ajoutez ceci dans votre section principale -->
+
+      <!-- Conteneur pour afficher les prévisions météorologiques -->
       <div id="forecast-container" class="forecast-container"></div>
     </section>
+
+    <!-- Inclusion du script JavaScript -->
     <script src="/main.js"></script>
   </body>
 </html>
