@@ -10,10 +10,14 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".block2").style.display = "block";
     document.querySelector(".block3").style.opacity = "1";
     document.querySelector(".video-background").style.display = "block";
+    event.preventDefault;
     getCurrentWeather();
     getForecast();
+    input();
   });
-
+  function input() {
+    document.getElementById("city").value = "";
+  }
   async function getCurrentWeather() {
     const city = document.getElementById("city").value.trim();
     if (!city) {
@@ -43,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const p2 = document.getElementById("p2");
     const img = document.getElementById("img");
     const video = document.getElementById("background-video");
-
+    document.getElementById("city").style.value = " ";
     h1.innerHTML = data.name;
     h2.innerHTML = data.main.temp + "°C";
     p1.innerHTML = data.main.humidity + "%";
